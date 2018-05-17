@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-error() { echo -e "$@"; exit 1 ;}
-[[ $# -lt 3 ]] && error "Not enough arguments!\nUsage: rum <wine-version or /path/to/wine/version> </path/to/wine/prefix> <wine command> [wine arguments...]"
-
 wines="/opt/wines"
+
+error() { echo -e "$@"; exit 1 ;}
+[[ $# -lt 3 ]] && error "Not enough arguments!\nUsage: rum <wine-version or /path/to/wine/version> </path/to/wine/prefix> <wine command> [wine arguments...]\n\nWine versions available:\n$(ls $wines)"
 
 winepath="$1"; shift
 export WINEPREFIX="$(readlink -f $1)";  shift
