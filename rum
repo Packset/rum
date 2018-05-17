@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 error() { echo -e "$@"; exit 1 ;}
-[[ $# -lt 3 ]] && error "Not enough arguments!\nUseage: rum <wine-version or /path/to/wine/version> </path/to/wine/prefix> <wine command> [wine arguments...]"
+[[ $# -lt 3 ]] && error "Not enough arguments!\nUsage: rum <wine-version or /path/to/wine/version> </path/to/wine/prefix> <wine command> [wine arguments...]"
 
 wines="/opt/wines"
 
