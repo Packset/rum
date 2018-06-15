@@ -23,5 +23,5 @@ export WINESERVER="$winepath/bin/wineserver"
 export WINELOADER="$winepath/bin/wine"
 export WINEDLLPATH="$winepath/lib/wine"
 
-echo "Rumming $winepath ($(wine --version)) in: $prefix"
+echo "Rumming $winepath ($(wine --version)) in: $WINEPREFIX"
 "$@"
